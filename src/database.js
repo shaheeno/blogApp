@@ -6,23 +6,23 @@ const database = new Sequelize('blog', 'root', '', {
   dialect: 'mysql'
 });
 
-// database.sync({force: true});
+// database.sync({ force: true });
 
 module.exports = {
   database: database,
   models: {
-    User: database.define('user',{
+    User: database.define('user', {
       name: {
         type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
       },
-      password:{
+      password: {
         type: Sequelize.STRING
       }
     }),
-    Blog: database.define("Blog",{
+    Blog: database.define("Blog", {
       title: {
         type: Sequelize.STRING
       },
